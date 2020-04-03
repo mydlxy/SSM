@@ -63,6 +63,8 @@ public class AjaxController {
 
     @RequestMapping(value = "/getExcel",produces="text/html;charset=UTF-8", method = {RequestMethod.GET,RequestMethod.POST})
     public String getExcel(HttpServletRequest request){
+
+        System.out.println("this is only a test *********** ");
         String location ="";
         List<GoodDetails>  goodlist =  goodService.getGoodList(location);
         request.setAttribute("resultList",goodlist);
